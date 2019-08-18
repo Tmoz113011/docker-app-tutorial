@@ -15,9 +15,9 @@ RUN curl -sS https://getcomposer.org/installer | php \
     && curl -sL https://deb.nodesource.com/setup_12.x | bash - \
     && apt-get install -y nodejs
 
-COPY . /var/www
+COPY . /var/www/html
 
-VOLUME /var/www
+VOLUME /var/www/html
 RUN composer install \
     && npm install
 
